@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+	<title>.:Kaah & Andre:.</title>
+	<style>	
+
+      *{
+      	margin: 0;
+      	padding: 0;
+      	box-sizing: border-box;
+      }
+      body{
+      	display: grid;
+      	justify-content: center;
+      	background: url(img/fundo.jpg);
+      	background-size: 100%;
+      }
+      h1{
+      	font-size: 30px;
+      	font-family: 'Ms Madi', cursive;
+      	text-align: center;
+      	margin-top: 30px;
+      	color: #DA70D6;
+      	text-shadow: 5px 5px 10px #FF69B4;
+      }
+      p{
+		display: none;
+		color: #6A5ACD;
+		font-size: 16px;
+		font-family: 'Trebuchet MS';
+		opacity:.7;
+		font-weight: 800;
+		letter-spacing: .8px;
+		text-shadow: 0px 0px 10px #6A5ACD;
+		text-align: center;
+	  }
+      .amor{
+      	max-width: 200px;
+      	height: 300px;
+      	display: flex;
+      	background: url(img/amor.png);
+      	background-size: cover;
+      	border-radius: 30px;
+      	box-shadow: 0px 0px 20px black;
+      	margin: 0 auto;
+      	margin-top: 60px;
+      	margin-bottom: 50px;
+      }
+      .moldura{
+      	width: 280px;
+      	height: 390px;
+      	background: url(img/moldura.gif);
+      	background-size: 100% 100%;
+      	margin-top: -80px;
+      	margin-left: -40px;
+      }
+      #verso{
+      	width: 260px;
+      	margin: 0 auto;
+      }
+      footer{
+      	position: absolute;
+        bottom:5px;
+      }
+      span{
+      	font-family: 'Ms Madi', cursive;
+      	font-size: 20px;
+      	font-weight: 900;
+      	padding-left: 20px;
+      }
+      @media(min-height: 780px){
+      	body{
+      		padding: 0px 50px 50px 50px;
+      	}
+      	#verso{
+      		width: 980px;
+      		text-align: center;
+      		font-size: 22px;
+      	}
+      }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Kaah & Andre</h1>
+	</header>
+	<div class="amor">
+		<div class="moldura"></div>
+	</div>
+	<div id="verso">
+		<p>E, acima de tudo, tenha amor, pois o amor une perfeitamente todas as coisas.<br> Colossences 3:4</p>
+		<p>Completem a minha alegria, tendo o mesmo modo de pensar, o mesmo amor, um só espírito e uma só atitude. <br>Filipenses 2:2</p>
+		<p>Ainda que eu tenha o dom de profecia, saiba todos os mistérios e todo o conhecimento e tenha uma fé capaz de mover montanhas, se não tiver amor, nada serei. <br> 1 Corintios 13:2</p>
+		<p>Põe-me como selo sobre o teu coração, como selo sobre o teu braço, porque o amor é forte como a morte. <br>Cânticos 8:6</p>
+		<p>O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. <br> 1 Coríntios 13:4-8</p>
+		<p>Estou ouvindo a voz do meu amor. Ele vem depressa, descendo as montanhas, correndo pelos montes. <br>Cânticos 2:8</p>
+		<p>O meu amado é meu, e eu sou dele. <br>Cânticos 2:16</p>
+		<p>Quem encontra uma esposa encontra algo excelente; recebeu uma bênção do Senhor. <br> Provérbios 18:22</p>
+		<p>Nenhuma quantidade de água pode apagar o amor, e nenhum rio pode afogá-lo. Se alguém quisesse comprar o amor e por ele oferecesse as suas riquezas, receberia somente o desprezo. <br>Cânticos 8:7</p>
+		<p>Tudo quanto Deus faz durará eternamente. <br>Eclesiastes 3:14</p>
+		<p>O amor tudo sofre, tudo crê, tudo espera, tudo suporta. <br>1 Coríntios 13:7</p>
+		<p>O Senhor seja entre mim e ti, e entre a minha semente e a tua semente, seja perpetuamente. <br>1 Samuel 20:42</p>
+		<p>Muitas mulheres são boas esposas, mas você é a melhor de todas. <br>Provérbios 31:29</p>
+		<p>Aonde quer que fores, eu irei e, onde quer que pousares, ali eu pousarei; <br> Rute 1:16</p>
+		<p>Mulher virtuosa quem a achará? O seu valor muito excede ao de rubis. <br>Provérbios 31:10</p>
+	</div>
+	<script>
+		function verso(){
+			var verso = document.querySelectorAll('p');
+			var x = Math.floor(Math.random() * 14);
+			verso.forEach((e)=>{
+				e.style.display = 'none';
+			});
+			verso[x].style.display = 'block';
+		}
+		verso();
+		const start = window.setInterval(verso,5000);
+	</script>
+	<footer>
+		<span>Te amo</span>
+	</footer>
+</body>
+</html>
